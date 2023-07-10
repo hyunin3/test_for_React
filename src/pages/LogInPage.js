@@ -45,8 +45,8 @@ const LogInPage = () => {
           }
         )
         .then((res) => {
-          const { email, accessToken, username, userId, category } = res.data;
-          dispatch(logIn(email, userId, username, accessToken, category));
+          const { email, accessToken, username, userId } = res.data;
+          dispatch(logIn(email, userId, username, accessToken));
           navigate("/");
         })
         .catch((err) => {
